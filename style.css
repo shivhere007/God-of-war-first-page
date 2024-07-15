@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+main {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),
+    url(images/wp11690883-god-of-war-ragnarok-uhd-wallpapers.png);
+  background-size: cover;
+  background-position: center;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+}
+a:hover {
+  font-weight: bolder;
+  color: #0c375f;
+}
+/* HEADER */
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+.navbar {
+  width: 100%;
+  height: 10vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo img {
+  margin-top: 11px;
+  margin-left: -10px;
+}
+.navbar .links {
+  display: flex;
+  gap: 4rem;
+  margin-left: -90px;
+}
+.navbar .toggle-btn {
+  color: #0c375f;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.action-btn {
+  background-color: #185894;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+.action-btn:hover {
+  scale: 1.05;
+  color: white;
+  background-color: #0c375f;
+}
+.action-btn:active {
+  scale: 0.95;
+}
+
+/* DROPDOWN MENU  */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 10vh;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown-menu.open {
+  height: 240px;
+}
+.dropdown-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown-menu .action-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* HOME */
+#home {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+#home h1 {
+  margin-top: 70px;
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  transition: 0.7s;
+}
+#home h1:hover {
+  text-shadow: none;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+#home h3 {
+  margin-top: -20px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  /* font-size: 2rem; */
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action-btn {
+    display: none;
+  }
+
+  .navbar .toggle-btn {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
+  }
+  main {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+      url(images/god-of-war-ragnarök-and-mobile-wallpaper-2022-v0-925f2g1gt6a91.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  #home h1 {
+    margin-top: -140px;
+    font-size: 3rem;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  }
+}
